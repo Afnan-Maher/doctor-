@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCare - Doctor Appointment Booking</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">+</div>
+                <span class="logo-text">HealthCare</span>
+            </div>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link ">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="find-doctor.html" class="nav-link">Find a Doctor</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-auth" id="navAuth">
+                <button class="btn-login">
+                    <span>Login</span>
+                </button>
+            </div>
+
+            <button class="mobile-menu-btn">
+                <span class="menu-icon">☰</span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1>Find & Book Appointments with Trusted Doctors</h1>
+                    <p>Easy online booking for quality healthcare. Connect with experienced doctors, view their availability, and schedule appointments instantly. Your health is our priority.</p>
+                    
+                    <button class="btn-primary" onclick="window.location.href='find-doctor.html'">
+                        <span>🔍 Find a Doctor</span>
+                    </button>
+
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <p class="stat-number">200+</p>
+                            <p class="stat-label">Doctors</p>
+                        </div>
+                        <div class="stat-item">
+                            <p class="stat-number">50k+</p>
+                            <p class="stat-label">Patients</p>
+                        </div>
+                        <div class="stat-item">
+                            <p class="stat-number">95%</p>
+                            <p class="stat-label">Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1758691461935-202e2ef6b69f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" alt="Doctor consultation">
+                    <!-- <div class="floating-card">
+                        <div class="card-icon">✓</div>
+                        <div>
+                            <p class="card-title">Easy Booking</p>
+                            <p class="card-text">Book in 3 simple steps</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Us</h2>
+                <p>We provide a seamless healthcare experience with features designed to make your journey easier and more convenient.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon blue">📅</div>
+                    <h3>Easy Booking</h3>
+                    <p>Book appointments in just a few clicks. Simple, fast, and convenient.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon green">🛡️</div>
+                    <h3>Trusted Doctors</h3>
+                    <p>Connect with verified, experienced healthcare professionals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon purple">🕐</div>
+                    <h3>24/7 Access</h3>
+                    <p>View doctor profiles and book appointments anytime, anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Medical Services</h2>
+                <p>Comprehensive healthcare services across multiple specializations to meet all your medical needs.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon red">❤️</div>
+                    <p>Cardiology</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon pink">👶</div>
+                    <p>Pediatrics</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon orange">🔬</div>
+                    <p>Dermatology</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon blue">🦴</div>
+                    <p>Orthopedics</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon cyan">🦷</div>
+                    <p>Dentistry</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon purple">🧠</div>
+                    <p>Neurology</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon green">👁️</div>
+                    <p>Ophthalmology</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon indigo">💊</div>
+                    <p>General Medicine</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Expert Doctors</h2>
+                <p>Our team of highly qualified and experienced healthcare professionals is dedicated to providing you with the best possible care.</p>
+            </div>
+
+            <div class="doctors-grid" id="featuredDoctors">
+                </div>
+
+            <div class="section-footer">
+                <a href="find-doctor.html" class="link-arrow">
+                    <span>View All Doctors</span>
+                    <span>→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container-narrow">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our appointment booking system.</p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I book an appointment?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Simply browse our list of doctors, select your preferred doctor, choose an available time slot, and confirm your booking. You need to be logged in to complete the booking process.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I cancel or reschedule my appointment?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, you can cancel your appointments from the "My Bookings" section. For rescheduling, please cancel the existing appointment and book a new time slot.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I search for a specific doctor or specialty?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Visit the "Find a Doctor" page and use the search bar to filter doctors by name or specialty. You can easily find the right healthcare professional for your needs.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item active">
+                    <button class="faq-question">
+                        <span>Is my personal information secure?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. We take data security seriously and implement industry-standard measures to protect your personal and medical information.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What if I need to contact a doctor urgently?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>For urgent medical situations, please contact emergency services. For non-emergency inquiries, you can find the doctor's contact information on their profile page.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Patients Say</h2>
+                <p>Read testimonials from patients who have used our platform to book appointments and receive quality healthcare.</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="quote-icon">"</div>
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Sarah Williams">
+                        <div>
+                            <p class="reviewer-name">Sarah Williams</p>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="review-text">Excellent service! I was able to find a great doctor and book an appointment within minutes. The whole process was smooth and hassle-free.</p>
+                    <p class="review-date">November 2025</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="quote-icon">"</div>
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Michael Brown">
+                        <div>
+                            <p class="reviewer-name">Michael Brown</p>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="review-text">This platform made it so easy to manage my family's healthcare appointments. The doctors are professional and the booking system is intuitive.</p>
+                    <p class="review-date">November 2025</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="quote-icon">"</div>
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Emily Davis">
+                        <div>
+                            <p class="reviewer-name">Emily Davis</p>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                    <p class="review-text">I love how I can see all the doctor details, ratings, and available times in one place. It saved me so much time compared to calling multiple clinics.</p>
+                    <p class="review-date">October 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div class="logo-icon">+</div>
+                        <span class="logo-text">HealthCare</span>
+                    </div>
+                    <p>Your trusted platform for booking appointments with qualified healthcare professionals.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="find-doctor.html">Find a Doctor</a></li>
+                        <li><a href="#contact">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li>Cardiology</li>
+                        <li>Pediatrics</li>
+                        <li>Dermatology</li>
+                        <li>Orthopedics</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-list">
+                        <li>📍 123 Medical Center Dr, Healthcare City, HC 12345</li>
+                        <li>📞 +1 (555) 000-0000</li>
+                        <li>✉️ contact@healthcare.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 HealthCare. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">t</a>
+                    <a href="#" class="social-icon">i</a>
+                    <a href="#" class="social-icon">in</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Login to Your Account</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn-submit">Login</button>
+                <p class="demo-note">Demo: Use any email and password to login</p>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
